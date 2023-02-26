@@ -9,3 +9,9 @@ Current checklist of features:
 | Registration form     | 🟢      |
 | Login form            | 🟡      |
 | Automated DB creation | 🔴      |
+
+**TBA**
+
+ - Fix login system;
+ - Rewrite project to follow M-V-C pattern;
+ - Add ORM?;
