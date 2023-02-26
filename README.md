@@ -15,3 +15,4 @@ Current checklist of features:
  - Fix login system;
  - Rewrite project to follow M-V-C pattern;
  - Add ORM?;
+ - Add better UI;
