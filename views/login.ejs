@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <ul>
+    <% if (typeof errors !== 'undefined') 
+    { %> <% errors.forEach(error => { %>
+    <li><%= error %></li>
+    <% }) %> <% } %>
+</ul>
+    <form class="auth" action="/login" method="POST">
+        <label for="auth">Sign in using login or e-mail:</label><br>
+        <input type="text" id="email" name="email"><br>
+
+        <label for="pwd">Password:</label><br>
+        <input type="password" id="pwd" name="pwd"/><br>
+
+        <br><input type="submit" value="Submit"><br>
+    </form>
+    
+    <br>Don't have an account yet? <a href="/register">Register</a><br>
+    <a href="/">Back to the home page</a>
+</body>
+
+
+</html>

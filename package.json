@@ -1,0 +1,28 @@
+{
+  "name": "codeit-nodetrainee",
+  "version": "1.0.0",
+  "description": "tech assignment for CodeIT",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhdnjkz/codeit-nodetrainee.git"
+  },
+  "author": "Bohdan Saltynskiy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhdnjkz/codeit-nodetrainee/issues"
+  },
+  "homepage": "https://github.com/bhdnjkz/codeit-nodetrainee#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "nodemon": "^2.0.20",
+    "pg": "^8.9.0"
+  }
+}

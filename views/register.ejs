@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+</head>
+<body>
+    <ul>
+            <% if (typeof errors !== 'undefined') 
+        { %> <% errors.forEach(error => { %>
+        <li><%= error %></li>
+        <% }) %> <% } %>
+    </ul>
+    <form class="form-register" action="/register" method="POST">
+
+        <label for="email">Email: </label><br>
+        <input type="text" id="email" name="email" value="<%= formDataHolder.email %>"><br>
+
+        <label for="login">Login: </label><br>
+        <input type="text" id="login" name="login" value="<%= formDataHolder.login %>"><br>
+
+        <label for="rname">Real Name: </label><br>
+        <input type="rname" id="rname" name="rname" placeholder="John Doe"value="<%= formDataHolder.rname %>"
+        pattern="[a-zA-Z][a-zA-Z ]{2,}"><br>
+
+        <label for="pwd">Password:</label><br>
+        <input type="password" id="pwd" name="pwd"><br>
+
+        <label for="pwd">Confirm password:</label><br>
+        <input type="password" id="pwd2" name="pwd2"><br>
+
+        <label for="birthday">Birthday:</label><br>
+        <input type="date" id="birthday" name="birthday" value="<%= formDataHolder.birthday %>"><br>
+
+        <label for="country">Where are you from?</label>
+        <select name="country" id="country"><br>
+                    <option>
+                        <% for(let i = 0; i  < country_data.length; i ++) { %>
+                            <option value="<%= country_data[i].country_name %>">
+                                <%= country_data[i].country_name%></option>
+                            <% } %>
+                    </option>
+        </select>
+        <label for="terms">Accept Terms and Conditions</label><br>
+        <input type="checkbox" id="terms" name="terms" value="" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <br>Already have an account? <a href="/login">Login</a><br>
+</body>
+</html>
+
