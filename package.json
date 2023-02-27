@@ -4,8 +4,7 @@
   "description": "tech assignment for CodeIT",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "build": ""
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",

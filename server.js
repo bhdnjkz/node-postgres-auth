@@ -1,5 +1,5 @@
 const express = require('express')
-const pool = require('../db/dbconnect')
+const pool = require('./db/dbconnect')
 const app = express()
 const session = require('express-session')
 const PORT = process.env.PORT || 3000
