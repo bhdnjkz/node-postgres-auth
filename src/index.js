@@ -1,5 +1,5 @@
 const express = require('express')
-const pool = require('./db/dbconnect')
+const pool = require('../db/dbconnect')
 const app = express()
 const session = require('express-session')
 const PORT = process.env.PORT || 3000
@@ -114,6 +114,12 @@ let errors = []
 })
 
 
+function component() {
+  const element = document.createElement('div');
+  element.innerHTML = _.join(['Hello', 'world'], ' ');
+  return element;
+}
 
+document.body.appendChild(component());
 
 app.listen(PORT)
