@@ -2,7 +2,7 @@ const express = require('express')
 const pool = require('./db/dbconnect')
 const app = express()
 const session = require('express-session')
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 30000
 
 //middleware
 app.use(session({
@@ -14,6 +14,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json()); 
 app.use(express.static('public'))
 app.set('view engine', 'ejs')
+
 
 //routes
 app.get('/', (req, res) => {
