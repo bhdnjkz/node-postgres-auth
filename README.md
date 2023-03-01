@@ -8,7 +8,7 @@ Current checklist of features:
 |-----------------------|--------|
 | Registration form     | 🟢      |
 | Login form            | 🟡      |
-| Automated DB creation | 🔴      |
+| Automated DB creation | 🟢      |
 
 **TBA**
 
