@@ -16,3 +16,4 @@ Current checklist of features:
  - Rewrite project to follow M-V-C pattern;
  - Add ORM?;
  - Add better UI;
+ - Add user schema;
