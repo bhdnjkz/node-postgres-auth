@@ -4,9 +4,11 @@ const pool = new Pool({
     host: 'localhost',
     user: 'postgres',
     port: 5432,
-    password: "password",
+    password: "231445Doss",
     database: 'postgres'
 })
+//ssh password: aWaewa4reij;ie"
+
 
 pool.connect((err, client, done) => {
     if (err) throw err
@@ -20,8 +22,8 @@ pool.connect((err, client, done) => {
     })
     client.query(`SELECT COUNT (*) FROM countries`, (err, res) =>{
         if (err) throw err
-        if (res.rows[0].count === '0') {
-            client.query(`INSERT INTO "countries"("country_name") VALUES ('Ukraine'), ('USA'), ('Finland'), ('Canada')`)
+        if (res.rows.length === 0) {
+            client.query(`INSERT INTO "countries"("country_name") VALUES ("Ukraine"), ("USA"), ("Finland"), ("Canada")`)
         }
     })
     client.query(`CREATE TABLE IF NOT EXISTS public.users
@@ -36,8 +38,6 @@ pool.connect((err, client, done) => {
       done()
       if (err) {
         console.log(err.stack)
-    } else {
-        console.log(res.rows[0])
       }
     })
   })
