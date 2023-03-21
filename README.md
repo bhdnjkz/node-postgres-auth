@@ -1,4 +1,4 @@
-# codeit-nodetrainee
+# Simple node.js app;
 
 Run application with `npm start`
 
