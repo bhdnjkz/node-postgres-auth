@@ -1,14 +1,13 @@
 const Pool = require('pg').Pool
+require('dotenv').config()
 
 const pool = new Pool({
-    host: 'localhost',
-    user: 'postgres',
-    port: 5432,
-    password: "231445Doss",
-    database: 'postgres'
+    host: process.env.PGHOST,
+    user: process.env.PGUSER,
+    port: process.env.PGPORT,
+    password: process.env.PGPASSWORD,
+    database: process.env.PGDATABASE
 })
-//ssh password: aWaewa4reij;ie"
-
 
 pool.connect((err, client, done) => {
     if (err) throw err
@@ -26,6 +25,7 @@ pool.connect((err, client, done) => {
             client.query(`INSERT INTO "countries"("country_name") VALUES ("Ukraine"), ("USA"), ("Finland"), ("Canada")`)
         }
     })
+
     client.query(`CREATE TABLE IF NOT EXISTS public.users
     (
         email character varying COLLATE pg_catalog."default",
@@ -44,4 +44,4 @@ pool.connect((err, client, done) => {
 
 
 
-module.exports = pool
+module.exports = pool;

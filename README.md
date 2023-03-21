@@ -17,3 +17,34 @@ Current checklist of features:
  - Add ORM?;
  - Add better UI;
  - Add user schema;
+
+
+ project
+│   README.md
+│   package.json
+│   .env
+│   app.js
+│
+└───config
+│       db.js
+│
+└───controllers
+│       authController.js
+│
+└───middleware
+│       authentication.js
+│
+└───models
+│       user.js
+│
+└───routes
+│       authRoutes.js
+│
+└───views
+│       login.ejs
+│       register.ejs
+│
+└───public
+        │───css
+        │───js
+        │───images
